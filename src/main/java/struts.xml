@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="registeruser" class="org.employee.action.RegisterAction">
+			<result name="REGISTER">/register.jsp</result>
+		</action>
+		<action name="report" class="org.employee.action.ReportAction">
+			<result name="REPORT">/report.jsp</result>
+		</action>
+		<action name="updatedetails" class="org.employee.action.UpdateAction">
+			<result name="UPDATE">/update.jsp</result>
+		</action>
+		<action name="" class="org.employee.action.DeleteAction">
+			<result name="DELETE">/delete.jsp</result>
+		</action>
+		<action name="login">  
+			<result >/login.jsp</result>  
+		</action>  
+		<action name="loginprocess" class="org.employee.action.Login">  
+			<result name="success"  >/loginsuccess.jsp</result>  
+			<result name="error" >/loginerror.jsp</result>  
+		</action>  
+		
+		<action name="logout" class="org.employee.action.Login" method="logout">  
+			<result name="success" >/logoutsuccess.jsp</result>  
+		</action>  
+  
+		<action name="profile" class="org.employee.action.profile">  
+			<result name="success" >/profilesucess.jsp</result>  
+			<result name="error" >/profileerror.jsp</result>  
+		</action>  
+	</package>
+</struts>
